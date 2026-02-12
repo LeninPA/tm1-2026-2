@@ -2,6 +2,15 @@
 """
 Script para hacer regresión lineal simple
 """
+from plotnine import (
+    ggplot, 
+    aes,
+    geom_point,
+    geom_line,
+    geom_smooth,
+    labs
+)
+from pandas import DataFrame
 
 def rls(x: list[float], y: list) -> list[float]:
     n = len(x)
@@ -24,7 +33,25 @@ def rls(x: list[float], y: list) -> list[float]:
 def main():
     x = [63, 52, 50, 55, 57, 60, 63, 51] # Temp en Farenheit
     y = [80, 45, 37, 67, 58, 79, 89, 46] # Chirridos grillo
-    print(rls(x, y))
+
+    alfa, beta = rls(x, y)
+    print(f"{alfa=}, {beta=}")
+
+    y0 = [alfa * xi + beta for xi in x]
+    d = DataFrame(data={ "x": x, "y": y, "predY": y0 })
+
+    p = (
+        ggplot(d, aes("x", "y"))
+        + geom_point()
+        # + geom_smooth(method="lm", color = "blue")
+        + geom_line(aes(y = "predY"), color = "blue")
+        + labs(
+            title = "Regresión lineal",
+            x     = "Temperatura [F]",
+            y     = "# Chirridos"
+        )
+    )
+    p.show()
 
 if __name__ == "__main__":
     main()
