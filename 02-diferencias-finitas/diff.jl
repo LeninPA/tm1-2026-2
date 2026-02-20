@@ -1,4 +1,4 @@
-import Statistics: mean
+import Statistics: mean, var
 
 function main()
   f(x)  = exp(x)
@@ -20,6 +20,8 @@ function main()
   # println(err)
   println("Error promedio")
   println(mean(err))
+  println("Varianza del error")
+  println(var(err))
 end
 
 main()
