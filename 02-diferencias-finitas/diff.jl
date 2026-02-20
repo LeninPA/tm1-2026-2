@@ -10,12 +10,12 @@ function main()
 
   df_approx = diff(fx) ./ h
   df_truth_full = df.(x)
-  df_truth = df.(x)[2:length(df_truth_full)]
+  df_truth = df_truth_full[2:length(df_truth_full)]
   err = abs.(df_approx - df_truth)
-  # println("df(x)")
-  # println(df_truth)
-  # println("f(x)")
-  # println(df_approx)
+  println("df(x)")
+  println(length(df_truth))
+  println("f(x)")
+  println(length(df_approx))
   # println("err")
   # println(err)
   println("Error promedio")
