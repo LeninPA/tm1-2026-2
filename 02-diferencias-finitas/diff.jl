@@ -1,4 +1,5 @@
 import Statistics: mean, var
+import Plots: plot, savefig
 
 function main()
   f(x)  = exp(x)
@@ -22,6 +23,9 @@ function main()
   println(mean(err))
   println("Varianza del error")
   println(var(err))
+
+  plot(0.001:0.001:10, [df_truth df_approx], label=["truth" "aprox"])
+  savefig("diff.png")
 end
 
 main()
