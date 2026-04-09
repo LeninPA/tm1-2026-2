@@ -3,7 +3,7 @@ Modelling Lab Spring 2026
 
 | Práctica | Enlace | Fecha de entrega |
 |----------|--------|------------------|
-| 7        | [L1](https://classroom.github.com/a/R6N_zRdu) [L2](https://jhugestar.github.io/snu-vision-lecture/corner/harris_viz.html) | Abril 12 23:59 |
+| 7        | [L1](https://classroom.github.com/a/R6N_zRdu) [L2](https://jhugestar.github.io/snu-vision-lecture/corner/harris_viz.html) [L3](https://shahnab.github.io/OperationMatrix/) | Abril 12 23:59 |
 | 7E       |~L1~ | Marzo 30 23:59   |
 | 6        | ~L0~ [L1](https://leetcode.com/problems/two-sum/description/) [L2](https://neetcode.io/practice/practice/blind75) [L3](https://github.com/javydevx/leetcode-tracker) [L4](https://seanprashad.com/leetcode-patterns/?view=beginner)       | Marzo 23 23:59   |
 | 5        |        | Marzo 13         |
